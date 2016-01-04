@@ -1,6 +1,6 @@
 set $mod Mod4
 
-
+exec --no-startup-id xset r rate 200 20
 
 exec --no-startup-id nitrogen --restore # set wallpaper
 font pango:Terminus 11px

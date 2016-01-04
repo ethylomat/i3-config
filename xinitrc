@@ -1,11 +1,6 @@
 #!/bin/sh
 
 
-#set keyboard response times
-xset r rate 200 20
-
-
-
 if [ -d /etc/X11/xinit/xinitrc.d ]; then
   for f in /etc/X11/xinit/xinitrc.d/*; do
     [ -x "$f" ] && . "$f"
@@ -27,7 +22,7 @@ xrdb -merge ~/.i3/xresources
 [ -e ~/.screen_setup ] && source ~/.screen_setup
 
 # background
-[ -e ~/.fehbg ] && source ~/.fehbg
+#[ -e ~/.fehbg ] && source ~/.fehbg
 
 # hide mouse coursor when it isn't used
 unclutter -root -visible &
@@ -68,5 +63,11 @@ compton --config ~/.i3/compton.conf &
 xcape
 
 i3
+
+
+#set keyboard response times
+
+xset r rate 200 20
+
 
 true
