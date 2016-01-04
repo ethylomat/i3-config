@@ -58,7 +58,7 @@ bindsym $mod+n layout tabbed
 bindsym $mod+m layout toggle split
 
 # container navigation
-bindsym $mod+a focus parent
+#bindsym $mod+a focus parent
 #bindsym $mod+d focus child
 
 # move container between displays
@@ -119,7 +119,7 @@ bindsym $mod+s mode "resize"
 
 # multimedia keys
 bindsym XF86AudioRaiseVolume exec "amixer -D pulse sset Master '3%+'"
-bindsym XF86AudioLowerVolume exec "amixer -D pulse sset Master '1%-'"
+bindsym XF86AudioLowerVolume exec "amixer -D pulse sset Master '3%-'"
 bindsym XF86AudioMute exec "amixer -D pulse set Master toggle"
 bindsym XF86AudioMicMute exec "amixer -D pulse sset Capture toggle"
 
