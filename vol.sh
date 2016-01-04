@@ -1,4 +1,7 @@
 #!/bin/bash
+
+# This script prints the "Master" volume in percent
+
 mute=`amixer get Master | grep "Mono:" | awk '{print $6}'`
 if [ $mute == "[on]" ]
 then
