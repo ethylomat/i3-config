@@ -10,6 +10,10 @@ force_focus_wrapping yes
 
 set $gray1 #373d48
 set $gray2 #29303a
+set $gray3 #586273
+
+##373d48
+##29303a
 
 client.focused            $gray1   $gray1   #FFFFFF   $gray1
 client.focused_inactive   $gray2   $gray2   #FFFFFF   #000000
@@ -22,7 +26,7 @@ floating_modifier $mod
 bindsym $mod+Return exec gnome-terminal
 
 # kill focused window
-bindsym $mod+c kill
+bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
 bindsym $mod+d exec "dmenu_run -nb black -p run"
@@ -143,7 +147,7 @@ bar {
         colors {
                 statusline #AAAAAA
                 background $gray2
-                focused_workspace $gray2 $gray2 #FFFFFF
+                focused_workspace $gray3 $gray2 #FFFFFF
                 inactive_workspace $gray1 $gray1 #AAAAAA
         }
 }
