@@ -1,5 +1,11 @@
 #!/bin/sh
 
+
+#set keyboard response times
+xset r rate 200 20
+
+
+
 if [ -d /etc/X11/xinit/xinitrc.d ]; then
   for f in /etc/X11/xinit/xinitrc.d/*; do
     [ -x "$f" ] && . "$f"
