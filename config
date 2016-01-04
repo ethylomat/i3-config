@@ -25,9 +25,9 @@ bindsym $mod+Return exec gnome-terminal
 bindsym $mod+c kill
 
 # start dmenu (a program launcher)
-bindsym $mod+p exec "dmenu_run -nb black -p run"
+bindsym $mod+d exec "dmenu_run -nb black -p run"
 
-bindsym $mod+Shift+p exec "~/.bin/pass-autotype-dmenu"
+bindsym $mod+Shift+d exec "~/.bin/pass-autotype-dmenu"
 
 # screen lock
 bindsym Control+$mod+l exec slimlock
@@ -58,8 +58,8 @@ bindsym $mod+n layout tabbed
 bindsym $mod+m layout toggle split
 
 # container navigation
-bindsym $mod+d focus parent
-bindsym $mod+b focus child
+bindsym $mod+a focus parent
+#bindsym $mod+d focus child
 
 # move container between displays
 bindsym $mod+semicolon move workspace to output right
