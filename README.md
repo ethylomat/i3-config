@@ -1,4 +1,6 @@
-# My very own i3 Configuration
+# i3 Configuration
+
+(based on [ivyl/i3-config](https://github.com/ivyl/i3-config))
 
 ## Requirements
 ### general
@@ -24,7 +26,7 @@ It's as simple as that:
 
 ```bash
 cd
-git clone https://github.com/ivyl/i3-config.git .i3
+git clone https://github.com/ethylomat/i3-config.git .i3
 ln -s .i3/xinitrc .xinitrc
 ln -s .i3/gtkrc-2.0 .gtkrc-2.0
 ln -f $PWD/gtk-3.0-settings ~/.config/gtk-3.0/settings.ini
