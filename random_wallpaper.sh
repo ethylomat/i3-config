@@ -42,7 +42,7 @@ while [ $# -gt 0 ]; do
 done
 
 if $random; then
-	wpfile=$(ls "$WPDIR"/*.jpg | sort -R | head -n 1)
+	wpfile=$(ls "$WPDIR"/*.png "$WPDIR"/*.jpg | sort -R | head -n 1)
 	echo "chose $wpfile" >&2
 fi
 
