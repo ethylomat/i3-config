@@ -122,7 +122,7 @@ mode "resize" {
         bindcode Control+34 mode "default"
 }
 
-bindsym $mod+s mode "resize"
+bindsym $mod+r mode "resize"
 
 # multimedia keys
 bindsym XF86AudioRaiseVolume exec "amixer -D pulse sset Master '3%+'"
