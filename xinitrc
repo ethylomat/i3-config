@@ -65,9 +65,10 @@ xcape
 i3
 
 
-#set keyboard response times
-
+# set keyboard response times
 xset r rate 200 20
-
+# OS X like momentum for scrolling
+synclient VertScrollDelta=-70
+synclient HorizScrollDelta=-70
 
 true
