@@ -23,6 +23,7 @@ xrdb -merge ~/.i3/xresources
 
 # background
 #[ -e ~/.fehbg ] && source ~/.fehbg
+sh ~/.i3/random_wallpaper.sh
 
 # hide mouse coursor when it isn't used
 unclutter -root -visible &

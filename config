@@ -28,6 +28,9 @@ floating_modifier $mod
 # start a terminal
 bindsym $mod+Return exec gnome-terminal
 
+# set random wallpaper
+bindsym $mod+w exec "~/.i3/random_wallpaper.sh"
+
 # kill focused window
 bindsym $mod+Shift+q kill
 
