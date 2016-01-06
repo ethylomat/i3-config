@@ -51,10 +51,10 @@ urxvtd &
 
 # gpg agent
 export SSH_AUTH_SOCK="${HOME}/.gnupg/S.gpg-agent.ssh"
-gpg-connect-agent updatestartuptty /bye
+#gpg-connect-agent updatestartuptty /bye
 
 # composition manager
-compton --config ~/.i3/compton.conf &
+# compton --config ~/.i3/compton.conf &
 
 # Network Manager applet
 >> /dev/null which nm-applet && nm-applet &
