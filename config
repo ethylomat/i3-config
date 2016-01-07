@@ -3,7 +3,8 @@ set $mod Mod4
 exec --no-startup-id xset r rate 200 20
 
 exec --no-startup-id nitrogen --restore # set wallpaper
-font pango:Inconsolata 9
+# font pango:Inconsolata 9
+font pango:Ubuntu 9
 
 new_window pixel 3 
 focus_follows_mouse  yes
