@@ -1,5 +1,6 @@
 #!/bin/sh
 
+i3 &
 
 if [ -d /etc/X11/xinit/xinitrc.d ]; then
   for f in /etc/X11/xinit/xinitrc.d/*; do
@@ -47,6 +48,9 @@ udiskie &
 # terminal server
 urxvtd &
 
+# start autolock
+xautolock -time 10 -locker lock
+
 # dropbox
 [ -e /usr/bin/dropboxd ] && /usr/bin/dropboxd &
 
@@ -71,5 +75,7 @@ xset r rate 200 20
 # OS X like momentum for scrolling
 synclient VertScrollDelta=-70
 synclient HorizScrollDelta=-70
+# Mouse scrolling speed
+imwheel
 
 true

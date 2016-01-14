@@ -41,7 +41,7 @@ bindsym $mod+d exec "dmenu_run -nb black -p run"
 bindsym $mod+Shift+d exec "~/.bin/pass-autotype-dmenu"
 
 # screen lock
-bindsym Control+$mod+l exec slimlock
+bindsym Control+$mod+l exec lock
 
 # change focus
 bindsym $mod+h focus left
@@ -112,7 +112,7 @@ bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
-
+bindsym XF86ScreenSaver exec "lock"
 mode "resize" {
         bindsym h   resize shrink width 10 px or 10 ppt
         bindsym j   resize grow height 10 px or 10 ppt
