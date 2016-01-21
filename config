@@ -1,3 +1,5 @@
+exec --no-startup-id sh ~/.i3/xinitrc
+
 set $mod Mod4
 
 exec --no-startup-id xset r rate 200 20

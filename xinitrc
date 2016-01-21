@@ -1,7 +1,5 @@
 #!/bin/sh
 
-i3 &
-
 if [ -d /etc/X11/xinit/xinitrc.d ]; then
   for f in /etc/X11/xinit/xinitrc.d/*; do
     [ -x "$f" ] && . "$f"
@@ -36,8 +34,8 @@ start-pulseaudio-x11
 xmodmap ~/.i3/xmodmap
 [ -e ~/.xmodmap_local ] && xmodmap ~/.xmodmap_local
 
-# color temperature adjustment, set for Gdańsk
-redshift -l 54.35:18.65 -m randr -t 5500:4500 -g 0.75:0.75:0.75 &
+# color temperature adjustment, set for Heidelberg
+redshift -l 49.25:8.43 -m randr -t 5500:4500 -g 0.75:0.75:0.75 &
 
 # notification
 dunst -config ~/.i3/dunstrc &
@@ -49,10 +47,10 @@ udiskie &
 urxvtd &
 
 # start autolock
-xautolock -time 10 -locker lock
+xautolock -time 10 -locker lock &
 
 # dropbox
-[ -e /usr/bin/dropboxd ] && /usr/bin/dropboxd &
+[ -e ~/.dropbox-dist/dropboxd ] && ~/.dropbox-dist/dropboxd &
 
 # gpg agent
 export SSH_AUTH_SOCK="${HOME}/.gnupg/S.gpg-agent.ssh"
@@ -69,12 +67,13 @@ xcape
 
 i3
 
-
 # set keyboard response times
 xset r rate 200 20
+
 # OS X like momentum for scrolling
-synclient VertScrollDelta=-70
-synclient HorizScrollDelta=-70
+synclient VertScrollDelta=150
+synclient HorizScrollDelta=150
+
 # Mouse scrolling speed
 imwheel
 
