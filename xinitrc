@@ -75,6 +75,7 @@ synclient VertScrollDelta=150
 synclient HorizScrollDelta=150
 
 # Mouse scrolling speed
-imwheel
+#imwheel
 
 true
+

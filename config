@@ -144,7 +144,7 @@ bindsym XF86AudioPrev exec "playerctl previous"
 bindsym XF86KbdBrightnessDown exec "sudo /opt/kbdlight/bin/kbdlight -"
 bindsym XF86KbdBrightnessUp exec "sudo /opt/kbdlight/bin/kbdlight +"
 bindsym XF86TouchpadToggle exec "synclient TouchpadOff=$(synclient | awk '/TouchpadOff/ {print ($3+1)%2}')"
-
+bindsym XF86Launch1 exec "sh ~/.i3/rotate.sh"
 bindsym XF86Display exec "arandr"
 
 bindsym $mod+a exec "urxvtc -e alsamixer"
