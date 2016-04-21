@@ -2,13 +2,15 @@ exec --no-startup-id sh ~/.i3/xinitrc
 
 set $mod Mod4
 
+exec --no-startup-id xmodmap ~/.xmodmap
+
 exec --no-startup-id xset r rate 200 20
 
 exec --no-startup-id nitrogen --restore # set wallpaper
 # font pango:Inconsolata 9
 font pango:Ubuntu 9
 
-new_window pixel 3 
+new_window pixel 3
 focus_follows_mouse  yes
 
 #don't move to neighbouring screen with hjkl
@@ -18,8 +20,6 @@ set $gray1 #373d48
 set $gray2 #29303a
 set $gray3 #586273
 
-##373d48
-##29303a
 
 client.focused            $gray1   $gray1   #FFFFFF   $gray1
 client.focused_inactive   $gray2   $gray2   #FFFFFF   #000000
@@ -32,7 +32,7 @@ floating_modifier $mod
 bindsym $mod+Return exec gnome-terminal
 
 # set random wallpaper
-bindsym $mod+w exec "~/.i3/random_wallpaper.sh"
+#bindsym $mod+w exec "~/.i3/random_wallpaper.sh"
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -86,7 +86,10 @@ bindsym $mod+space focus mode_toggle
 # switch to last workspace
 #bindsym $mod+6 workspace back_and_forth
 
+assign [class="Spotify"] → 0
+
 # switch to workspace
+bindsym $mod+dead_circumflex workspace 0
 bindsym $mod+1 workspace 1
 bindsym $mod+2 workspace 2
 bindsym $mod+3 workspace 3
@@ -99,6 +102,7 @@ bindsym $mod+9 workspace 9
 bindsym $mod+0 workspace 10
 
 # move focused container to workspace
+bindsym $mod+Shift+dead_circumflex workspace 0
 bindsym $mod+Shift+1 move container to workspace 1
 bindsym $mod+Shift+2 move container to workspace 2
 bindsym $mod+Shift+3 move container to workspace 3
@@ -144,7 +148,7 @@ bindsym XF86AudioPrev exec "playerctl previous"
 bindsym XF86KbdBrightnessDown exec "sudo /opt/kbdlight/bin/kbdlight -"
 bindsym XF86KbdBrightnessUp exec "sudo /opt/kbdlight/bin/kbdlight +"
 bindsym XF86TouchpadToggle exec "synclient TouchpadOff=$(synclient | awk '/TouchpadOff/ {print ($3+1)%2}')"
-bindsym XF86Launch1 exec "sh ~/.i3/rotate.sh"
+bindsym XF86Launch1 exec "synapse"
 bindsym XF86Display exec "arandr"
 
 bindsym $mod+a exec "urxvtc -e alsamixer"
