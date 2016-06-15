@@ -119,6 +119,9 @@ bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 bindsym XF86ScreenSaver exec "lock"
+
+bindsym Print exec "gnome-screenshot"
+
 mode "resize" {
         bindsym h   resize shrink width 10 px or 10 ppt
         bindsym j   resize grow height 10 px or 10 ppt
@@ -148,7 +151,8 @@ bindsym XF86AudioPrev exec "playerctl previous"
 bindsym XF86KbdBrightnessDown exec "sudo /opt/kbdlight/bin/kbdlight -"
 bindsym XF86KbdBrightnessUp exec "sudo /opt/kbdlight/bin/kbdlight +"
 bindsym XF86TouchpadToggle exec "synclient TouchpadOff=$(synclient | awk '/TouchpadOff/ {print ($3+1)%2}')"
-bindsym XF86Launch1 exec "synapse"
+# bindsym XF86Launch1 exec "synapse"
+bindsym XF86Launch1 exec "lock"
 bindsym XF86Display exec "arandr"
 
 bindsym $mod+a exec "urxvtc -e alsamixer"
